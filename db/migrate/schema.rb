@@ -12,7 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2) do
 
-# Could not dump table "shows" because of following StandardError
-#   Unknown type 'sting' for column 'season'
-
-end
+    create_table "shows", force: :cascade do |t|
+      t.string "name"
+      t.string "network"
+      t.string "day"
+      t.integer "rating"
+      t.string "season"
+    end
+  
+  end
